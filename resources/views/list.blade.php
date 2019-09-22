@@ -21,6 +21,8 @@
 				<th>Email</th>
 				<th>Date of Birth</th>
 				<th>Salary</th>
+				<th>Edit</th>
+				<th>Delete</th>
 			</thead>
 			<tbody>
 				@foreach($employees as $e)
@@ -29,6 +31,8 @@
 					<td>{{ $e->email }}</td>
 					<td>{{ $e->birth_date }}</td>
 					<td>{{ $e->salary }}</td>
+					<td><a href="{{ URL::to('edit/'.$e->id) }}">Edit </a></td>
+					<td><a href="{{ URL::to('delete/'.$e->id) }}">Delete</td>
 				</tr>
 				@endforeach
 			</tbody>

@@ -30,3 +30,9 @@ Route::post('store','HomeController@store');
 
 
 Route::get('list','HomeController@all');
+
+//edit 
+Route::get('edit/{id}','HomeController@edit');
+Route::post('update/{id}','HomeController@update');
+//delete
+Route::get('delete/{id}','HomeController@delete');
